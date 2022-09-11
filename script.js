@@ -1,4 +1,4 @@
-const imageSrcDir = "./planets";
+const imageSrcDir = "/planetry/planets";
 
 const logo_text = document.querySelector(".logo .text");
 const logo_subtext = document.querySelector(".logo .sub-text");
