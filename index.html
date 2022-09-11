@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Planetry - The planet weight calculator</title>
+    <link rel="shortcut icon" href="./logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Header and navigation -->
+    <header>
+      <nav class="container flex">
+        <div class="logo flex">
+          <h1 class="text">Earth</h1>
+          <div class="sub-text">The blue planet</div>
+        </div>
+        <div class="flex-100"></div>
+        <div class="input flex">
+          <input
+            type="number"
+            placeholder="Weight"
+            min="0"
+            step="1"
+            max="9999"
+            id="input-weight"
+          />
+          <select name="wght-type" id="wght-type">
+            <option value="kg">Kg</option>
+            <option value="lbs">Lbs</option>
+          </select>
+        </div>
+        <button class="nav-trigger flex" id="nav-trigger-btn">
+          <div class="nav-line"></div>
+          <div class="nav-line"></div>
+        </button>
+      </nav>
+    </header>
+    <!-- Body -->
+    <div class="content container">
+      <div class="grid">
+        <div></div>
+        <div class="card card-n">
+          <div class="card-content">23.44°</div>
+          <div class="card-label">Axis tilt</div>
+        </div>
+        <div class="card card-n">
+          <div class="card-content">1x</div>
+          <div class="card-label">Gravity</div>
+        </div>
+        <div class="card card-n">
+          <div class="card-content little-small">1d 0h 0m</div>
+          <div class="card-label">Day hours</div>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="card card-fill">
+          <div class="card-expand">
+            <div class="flex justify-end">
+              <div class="weight-display">
+                <div class="inline" id="weight-result">0</div>
+                <div class="text-small inline" id="weight-result-type">kg</div>
+              </div>
+              <div class="weight-percent">
+                <div class="icon">
+                  <div id="dec-icon">
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M14 1.41L12.59 0L2 10.59V4H0V14H10V12H3.41L14 1.41Z"
+                        fill="#FF0000"
+                      />
+                    </svg>
+                  </div>
+                  <div id="inc-icon">
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 12.59L10.59 2H4V0H14V10H12V3.41L1.41 14L0 12.59Z"
+                        fill="green"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div id="percent-value">0%</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="list-card-div">
+            <div class="list-card flex">
+              <div class="title-text">Gravitational acceleration</div>
+              <div class="flex-100"></div>
+              <div class="trailing-text" id="g">9.807 m/s²</div>
+            </div>
+            <div class="list-card flex">
+              <div class="title-text">Radius of planet</div>
+              <div class="flex-100"></div>
+              <div class="trailing-text" id="r">6371 km</div>
+            </div>
+            <div class="list-card flex">
+              <div class="title-text">Age of planet</div>
+              <div class="flex-100"></div>
+              <div class="trailing-text" id="age">4543 billion years</div>
+            </div>
+            <div class="list-card flex">
+              <div class="title-text">Distance from sun</div>
+              <div class="flex-100"></div>
+              <div class="trailing-text" id="dist">1.5 * 10⁸ km</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Planet box -->
+      <div class="planet-box">
+        <div class="planet-list">
+          <button
+            class="planet-checkbox"
+            style="
+              --planet-clr-a: var(--mercury-clr-la);
+              --planet-clr-b: var(--mercury-clr-l);
+            "
+          >
+            <div class="label">Mercury</div>
+          </button>
+          <button
+            class="planet-checkbox"
+            style="
+              --planet-clr-a: var(--venus-clr-la);
+              --planet-clr-b: var(--venus-clr-l);
+            "
+          >
+            <div class="label">Venus</div>
+          </button>
+          <button
+            class="planet-checkbox active"
+            style="
+              --planet-clr-a: var(--earth-clr-la);
+              --planet-clr-b: var(--earth-clr-l);
+            "
+          >
+            <div class="label">Earth</div>
+          </button>
+          <button
+            class="planet-checkbox"
+            style="
+              --planet-clr-a: var(--mars-clr-la);
+              --planet-clr-b: var(--mars-clr-l);
+            "
+          >
+            <div class="label">Mars</div>
+          </button>
+          <button
+            class="planet-checkbox"
+            style="
+              --planet-clr-a: var(--jupiter-clr-la);
+              --planet-clr-b: var(--jupiter-clr-l);
+            "
+          >
+            <div class="label">Jupiter</div>
+          </button>
+          <button
+            class="planet-checkbox"
+            style="
+              --planet-clr-a: var(--saturn-clr-la);
+              --planet-clr-b: var(--saturn-clr-l);
+            "
+          >
+            <div class="label">Saturn</div>
+          </button>
+          <button
+            class="planet-checkbox"
+            style="
+              --planet-clr-a: var(--uranus-clr-la);
+              --planet-clr-b: var(--uranus-clr-l);
+            "
+          >
+            <div class="label">Uranus</div>
+          </button>
+          <button
+            class="planet-checkbox"
+            style="
+              --planet-clr-a: var(--neptune-clr-la);
+              --planet-clr-b: var(--neptune-clr-l);
+            "
+          >
+            <div class="label">Neptune</div>
+          </button>
+        </div>
+        <div class="planet-image">
+          <img src="./planets/earth.png" alt="planet-image" />
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer></footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+<!-- 712 and 780 -->
