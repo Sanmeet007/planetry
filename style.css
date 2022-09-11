@@ -334,6 +334,7 @@ nav {
   border-radius: 100%;
   animation: planet-rotation 100s linear infinite;
   pointer-events: none;
+  background-color: var(--current-clr-s);
 }
 
 .planet-list {
