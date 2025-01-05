@@ -1,4 +1,4 @@
-# 🌌 **Planetry** - The Planet Weight Calculator  
+# **Planetry** - The Planet Weight Calculator  
 
 [![Website](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge&logo=github)](https://sanmeet007.github.io/planetry/)
 
