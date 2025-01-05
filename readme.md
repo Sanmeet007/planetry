@@ -55,9 +55,10 @@ Contributions are welcome! Please feel free to submit a pull request or file an 
 
 To run the project locally:  
 
-1. Clone the repository:  
+1. Clone the repository:
+
    ```bash
    git clone https://github.com/Sanmeet007/planetry.git
    cd planetry
    ```
-2. Open the `index.html` file in your browser.  
+3. Open the `index.html` file in your browser.  
